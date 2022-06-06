@@ -22,7 +22,7 @@ app.autodiscover_tasks()
 app.conf.beat_schedule = {
     'test-model-every-60-seconds': {
         'task': 'positions.tasks.run_create_obj',
-        'schedule': 2.0,
+        'schedule': 60.0,
         # 'args': 
     },
 }
