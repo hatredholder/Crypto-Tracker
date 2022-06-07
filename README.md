@@ -14,5 +14,6 @@ Implement Django Channels connection;
 
 # Preview:
 
+![crypto_proj_1](https://user-images.githubusercontent.com/86254474/172397460-2806f735-013d-4188-9020-47550dac31b1.png)
 
 
