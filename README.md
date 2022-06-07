@@ -4,7 +4,7 @@ A Crypto Currency Tracker project made to check prices on top 100 crypto currenc
 
 Frontend: Basic HTML.
 
-Backend: Django 4.0, Celery, Redis.
+Backend: Django 4.0, Celery, Redis (as Celery message broker).
 
 Database: SQLite.
 
