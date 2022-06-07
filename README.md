@@ -1,4 +1,4 @@
-# Crypto-Checker
+# Crypto-Tracker
 
 A Crypto Currency Tracker project made to check prices on top 100 crypto currences. Data is coming from Coingecko API.
 
