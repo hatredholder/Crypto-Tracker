@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load humanize %}
 
 {% block title %}
     Main Page
@@ -22,8 +23,8 @@
                         <td><img src={{obj.image}} height='70'></td>
                         <td class="align-middle">{{obj.name}}</td>
                         <td class="align-middle">{{obj.market_cap_rank}}</td>
-                        <td class="align-middle">{{obj.market_cap}}</td>
-                        <td class="align-middle">{{obj.current_price}}</td>
+                        <td class="align-middle">{{obj.market_cap|intcomma}}</td>
+                        <td class="align-middle">{{obj.current_price|intcomma}}</td>
                     </tr>
                 {% endfor %}
             {% else %}

@@ -27,6 +27,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Apps
     'positions',
+    # Number "humanization" filter for numbers
+    'django.contrib.humanize',
 ]
 
 CELERY_BROKER_URL = 'redis://localhost:6379'

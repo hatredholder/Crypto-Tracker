@@ -20,8 +20,8 @@ app.autodiscover_tasks()
 
 # Beat schedule conf
 app.conf.beat_schedule = {
-    'test-model-every-60-seconds': {
-        'task': 'positions.tasks.run_create_obj',
+    'get-crypto-data-every-60-seconds': {
+        'task': 'positions.tasks.get_crypto_data',
         'schedule': 60.0,
         # 'args': 
     },
