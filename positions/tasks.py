@@ -2,7 +2,7 @@ import requests
 from celery import shared_task
 from crypto_proj.celery import app
 
-from .models import Position, Test
+from .models import Position
 from .utils import get_random_code
 
 
