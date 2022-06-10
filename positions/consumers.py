@@ -1,6 +1,6 @@
 import json
+
 from channels.generic.websocket import WebsocketConsumer
-from time import sleep
 
 from .models import Position
 
