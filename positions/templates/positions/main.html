@@ -21,10 +21,10 @@
                 {% for obj in data %}
                     <tr>
                         <td><img src={{obj.image}} height='70'></td>
-                        <td class="align-middle">{{obj.name}}</td>
-                        <td class="align-middle">{{obj.market_cap_rank}}</td>
-                        <td class="align-middle">{{obj.market_cap|intcomma}}</td>
-                        <td class="align-middle">{{obj.current_price|intcomma}}</td>
+                        <td class="name align-middle" value="{{obj.name}}">{{obj.name}}</td>
+                        <td class="rank align-middle" value="{{obj.name}}">{{obj.market_cap_rank}}</td>
+                        <td class="market_cap align-middle" value="{{obj.name}}">{{obj.market_cap|intcomma}}</td>
+                        <td class="price align-middle" value="{{obj.name}}">{{obj.current_price|intcomma}}</td>
                     </tr>
                 {% endfor %}
             {% else %}
@@ -35,4 +35,28 @@
 {% endblock content %}
 
 {% block scripts %}
+
+    <script>
+
+        chatSocket = new WebSocket("ws://localhost:8000/ws/")
+
+        chatSocket.onopen = function(e){
+            console.log("WebSocket connected successfully")
+        }
+
+        chatSocket.onclose = function(e){
+            console.log("WebSocket closed")
+        }
+
+        chatSocket.onmessage = function(e){
+            const data = JSON.parse(e.data)
+            console.log(data)
+
+            console.log(Object.values(data)[0])
+            document.querySelector(`.price[value="${Object.keys(data)[0]}"]`).innerHTML = Object.values(data)[0];
+
+        }
+    
+    </script>
+
 {% endblock scripts %}

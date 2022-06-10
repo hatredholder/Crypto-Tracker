@@ -23,6 +23,5 @@ app.conf.beat_schedule = {
     'get-crypto-data-every-60-seconds': {
         'task': 'positions.tasks.get_crypto_data',
         'schedule': 60.0,
-        # 'args': 
     },
 }

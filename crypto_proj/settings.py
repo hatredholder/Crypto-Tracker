@@ -29,6 +29,8 @@ INSTALLED_APPS = [
     'positions',
     # Number "humanization" filter for numbers
     'django.contrib.humanize',
+    # Django Channels
+    'channels',
 ]
 
 MIDDLEWARE = [
@@ -60,6 +62,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'crypto_proj.wsgi.application'
+
+ASGI_APPLICATION = 'crypto_proj.asgi.application'
 
 
 # Database
