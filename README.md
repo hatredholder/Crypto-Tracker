@@ -2,6 +2,8 @@
 
 A Crypto Currency Tracker project made to check prices on top 100 crypto currences. Data is coming from Coingecko API.
 
+Currency prices update automatically (achieved by using Django Channels). 
+
 Frontend: Basic HTML.
 
 Backend: Django 4.0, Celery, Redis (as Celery message broker).
@@ -10,7 +12,8 @@ Database: SQLite.
 
 # To Do/To Add:
 
-Implement Django Channels connection;
+Implement Django Channels connection; 
+✓ Done (6.10.22)
 
 # Preview:
 
