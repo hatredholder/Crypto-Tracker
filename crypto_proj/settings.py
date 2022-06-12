@@ -63,8 +63,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'crypto_proj.wsgi.application'
 
-ASGI_APPLICATION = 'crypto_proj.asgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
@@ -123,6 +121,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CELERY_BROKER_URL = 'redis://localhost:6379'
 
 # Django Channels config
+
+ASGI_APPLICATION = 'crypto_proj.asgi.application'
 
 CHANNEL_LAYERS = {
     'default': {
