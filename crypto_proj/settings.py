@@ -121,3 +121,14 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Celery config
 
 CELERY_BROKER_URL = 'redis://localhost:6379'
+
+# Django Channels config
+
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [('127.0.0.1', 6379)],
+        },
+    },
+}
