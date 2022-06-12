@@ -6,7 +6,7 @@ Currency prices update automatically (achieved by using Django Channels).
 
 Frontend: Basic HTML.
 
-Backend: Django 4.0, Celery, Redis (as Celery message broker).
+Backend: Django 4.0, Celery, Redis (for Celery message broking and Channels layers).
 
 Database: SQLite.
 
