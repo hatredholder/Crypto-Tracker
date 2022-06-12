@@ -20,8 +20,11 @@ app.autodiscover_tasks()
 
 # Beat schedule conf
 app.conf.beat_schedule = {
-    'get-crypto-data-every-60-seconds': {
+    # Set to update every 50 seconds cuz 
+    # the task in tasks.py
+    # itself takes about ~10 seconds
+    'get-crypto-data-every-50-seconds': {
         'task': 'positions.tasks.get_crypto_data',
-        'schedule': 60.0,
+        'schedule': 50.0,
     },
 }
