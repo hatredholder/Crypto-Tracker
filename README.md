@@ -2,7 +2,9 @@
 
 :money_with_wings: :money_with_wings: :money_with_wings:
 
-A Crypto Currency Tracker project based on Django 4.0 that is made to track prices on top 100 crypto currences in realtime. Data is gathered from the [Coingecko API](https://www.coingecko.com/). Scroll down to see the **Instructions** on how to launch this project properly. 
+A Crypto Currency Tracker project based on Django 4.0 that is made to track prices on top 100 crypto currences in realtime. Data is gathered from the [Coingecko API](https://www.coingecko.com/). 
+
+Scroll down to see the **Instructions** on how to launch this project properly. 
 
 ## Preview: 
 
