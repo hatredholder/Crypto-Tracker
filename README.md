@@ -26,7 +26,7 @@ Backend: Django 4.0, Celery, Redis (for Celery message broking and Channels laye
 
 Database: SQLite.
 
-## To Do/To Add:
+## To Do/To Add
 
 - [x] Implement Django Channels connection; 
 
