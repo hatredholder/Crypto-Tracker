@@ -6,7 +6,7 @@ A Crypto Currency Tracker project based on Django 4.0 that is made to track pric
 
 Scroll down to see the **Instructions** on how to launch this project properly. 
 
-## Preview: 
+## Preview 
 
 ![crypto_proj_1](https://user-images.githubusercontent.com/86254474/172397460-2806f735-013d-4188-9020-47550dac31b1.png)
 
