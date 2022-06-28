@@ -14,10 +14,10 @@ Scroll down to see the **Instructions** on how to launch this project properly.
 
 1. Clone this repository
 2. Start a new Virtualenv, activate it, type in console `pip install -r requirements.txt`
-3. Run a Redis server on port 6379 (this port is set by default) - https://redis.io/docs/getting-started/
-4. Run the Django server by typing in console `py manage.py runserver`
-5. Run a Celery worker - https://docs.celeryq.dev/en/stable/getting-started/first-steps-with-celery.html
-6. Run a Celery beat - https://docs.celeryq.dev/en/stable/userguide/periodic-tasks.html
+3. Run a Redis Server on port 6379 (this port is set by default) - https://redis.io/docs/getting-started/
+4. Run the Django Server by typing in console `py manage.py runserver`
+5. Run a Celery Worker - https://docs.celeryq.dev/en/stable/getting-started/first-steps-with-celery.html
+6. Run a Celery Beat - https://docs.celeryq.dev/en/stable/userguide/periodic-tasks.html
 
 ## Technologies
 
