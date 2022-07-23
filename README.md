@@ -29,7 +29,7 @@ Database: SQLite.
 
 ## To Do/To Add
 
-- [x] Implement Django Channels connection; 
+- [x] Implement Django Channels connection
 
 
 
