@@ -1,17 +1,18 @@
 import requests
 from asgiref.sync import async_to_sync
-from channels.layers import get_channel_layer
 from celery import shared_task
+from channels.layers import get_channel_layer
 
 from .models import Position
 
 
-
 @shared_task
 def get_crypto_data():
-    """Get data from the API, 
+    """
+    Get data from the API, 
     store it in DB, 
-    send a message to the consumer to update it in realtime"""
+    send a message to the consumer to update it in realtime
+    """
 
     # Get data
     url = ("https://api.coingecko.com/api/v3/coins/"

@@ -17,7 +17,6 @@ class PositionConsumer(WebsocketConsumer):
             self.channel_group_name,
             self.channel_name,
         )
-        print("joined the group")
 
         self.accept()
 
@@ -27,7 +26,6 @@ class PositionConsumer(WebsocketConsumer):
             self.channel_group_name,
             self.channel_name,
         )
-        print("left the group")
         
     def loc_message(self, event):
         # Get new data from the DB
