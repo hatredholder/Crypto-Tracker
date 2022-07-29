@@ -25,9 +25,9 @@
                     <tr>
                         <td><img src={{obj.image}} height='70'></td>
                         <td class="name align-middle" value="{{obj.name}}">{{obj.name}}</td>
-                        <td class="rank align-middle" value="{{obj.name}}">{{obj.market_cap_rank}}</td>
+                        <td class="rank align-middle" value="{{obj.name}}">{{obj.rank}}</td>
                         <td class="market_cap align-middle" value="{{obj.name}}">{{obj.market_cap|intcomma}}</td>
-                        <td class="price align-middle" value="{{obj.name}}">{{obj.current_price|intcomma}}</td>
+                        <td class="price align-middle" value="{{obj.name}}">{{obj.price|intcomma}}</td>
                     </tr>
                 {% endfor %}
             {% else %}
