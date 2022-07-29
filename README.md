@@ -17,7 +17,7 @@ Scroll down to see the **Instructions** on how to launch this project properly.
 3. Run a Redis Server on port 6379 (this port is set by default) - `redis-server`
 4. Run the Django Server - `py manage.py runserver`
 5. Run a Celery Worker - `celery -A crypto_proj beat`
-6. Run a Celery Beat - `celery -A crypto_proj worker -B`
+6. Run a Celery Beat - `celery -A crypto_proj worker`
 
 ## Technologies
 
