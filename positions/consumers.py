@@ -1,6 +1,7 @@
 import json
 
 from asgiref.sync import async_to_sync
+
 from channels.generic.websocket import WebsocketConsumer
 
 from .models import Position
@@ -30,4 +31,4 @@ class PositionConsumer(WebsocketConsumer):
     def loc_message(self, event):
         # Get new data from the DB
         for i in Position.objects.all():
-            self.send(json.dumps({i.name:i.price}))
+            self.send(json.dumps({i.name: i.price}))
