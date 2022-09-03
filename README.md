@@ -29,4 +29,6 @@ Database: SQLite.
 
 ## To Do/To Add
 
+- [ ] Update template JavaScript logic;
+
 - [x] Implement Django Channels connection
