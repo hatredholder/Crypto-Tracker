@@ -15,7 +15,7 @@ Scroll down to see the **Instructions** on how to launch this project properly.
 1. Clone this repository
 2. Start a new Virtualenv, activate it, type in console `pip install -r requirements.txt`
 3. Run a Redis Server on port 6379 (this port is set by default) - `redis-server`
-4. Run the Django Server - `py manage.py runserver`
+4. Run the Django Server - `python manage.py runserver`
 5. Run a Celery Worker - `celery -A crypto_proj beat`
 6. Run a Celery Beat - `celery -A crypto_proj worker`
 
@@ -29,6 +29,6 @@ Database: SQLite.
 
 ## To Do/To Add
 
-- [ ] Update template JavaScript logic;
+- [x] Update template JavaScript logic;
 
 - [x] Implement Django Channels connection
