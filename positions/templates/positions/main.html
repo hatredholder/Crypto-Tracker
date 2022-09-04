@@ -23,11 +23,11 @@
             {% if data %}
                 {% for obj in data %}
                     <tr>
-                        <td><img src={{obj.image}} height='70'></td>
-                        <td class="name align-middle" value="{{obj.name}}">{{obj.name}}</td>
-                        <td class="rank align-middle" value="{{obj.name}}">{{obj.rank}}</td>
-                        <td class="market_cap align-middle" value="{{obj.name}}">{{obj.market_cap|intcomma}}</td>
-                        <td class="price align-middle" value="{{obj.name}}">{{obj.price|intcomma}}</td>
+                        <td><img class="image align-middle" value="{{forloop.counter}}" src={{obj.image}} height='70'></td>
+                        <td class="name align-middle" value="{{forloop.counter}}">{{obj.name}}</td>
+                        <td class="rank align-middle" value="{{forloop.counter}}">{{forloop.counter}}</td>
+                        <td class="market_cap align-middle" value="{{forloop.counter}}">{{obj.market_cap|intcomma}}</td>
+                        <td class="price align-middle" value="{{forloop.counter}}">{{obj.price}}</td>
                     </tr>
                 {% endfor %}
             {% else %}
@@ -40,10 +40,10 @@
 {% block scripts %}
     <script>
         // "Humanize" a number (get commas separators)
-        function numberWithCommas(x) {
+        function numberWithCommas(x) {   
             return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
         }
-
+        
         // Basic websocket setup
         chatSocket = new WebSocket("ws://localhost:8000/ws/")
 
@@ -59,8 +59,19 @@
             const data = JSON.parse(e.data)
 
             // Find crypto currency by value, set to one received from the socket
-            document.querySelector(`.price[value="${Object.keys(data)[0]}"]`).innerHTML = numberWithCommas(Object.values(data)[0]);
 
+            // Set name
+            document.querySelector(`.name[value="${Object.values(data)[0][0]}"]`).innerHTML = Object.keys(data)[0];
+
+            // Set price
+            document.querySelector(`.price[value="${Object.values(data)[0][0]}"]`).innerHTML = Object.values(data)[0][1];
+            
+            // Set image
+            document.querySelector(`.image[value="${Object.values(data)[0][0]}"]`).innerHTML = Object.values(data)[0][2];
+
+            // Set market cap
+            document.querySelector(`obj.market_cap[value="${Object.values(data)[0][0]}"]`).innerHTML = numberWithCommas(Object.values(data)[0][3]);
+  
         }
     </script>
 {% endblock scripts %}

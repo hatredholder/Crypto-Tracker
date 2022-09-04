@@ -31,4 +31,4 @@ class PositionConsumer(WebsocketConsumer):
     def loc_message(self, event):
         # Get new data from the DB
         for i in Position.objects.all():
-            self.send(json.dumps({i.name: i.price}))
+            self.send(json.dumps({i.name: [i.rank, i.price, i.image, i.market_cap]}))
