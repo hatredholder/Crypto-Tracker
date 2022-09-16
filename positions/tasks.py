@@ -25,8 +25,10 @@ def get_crypto_data():
     )
     data = requests.get(url).json()
 
-    # Delete old data, store new
+    # Delete old data
     Position.objects.all().delete()
+    
+    # Store new data
     for item in data:
         p, _ = Position.objects.get_or_create(name=item['name'])
         p.image = item['image']
@@ -37,7 +39,8 @@ def get_crypto_data():
 
     # Send a message to the consumer
     channel_layer = get_channel_layer()
-    message = {'type': 'loc_message',
-               'positions': "1",
-               }
+    message = {
+        'type': 'loc_message',
+        'positions': "1",
+    }
     async_to_sync(channel_layer.group_send)('realtime-data', message)
