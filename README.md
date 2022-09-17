@@ -12,18 +12,42 @@ Scroll down to see the **Instructions** on how to launch this project properly.
 
 ## Instructions
 
-1. Clone this repository
-2. Start a new Virtualenv, activate it, type in console `pip install -r requirements.txt`
-3. Run a Redis Server on port 6379 (this port is set by default) - `redis-server`
-4. Run the Django Server - `python manage.py runserver`
-5. Run a Celery Worker - `celery -A crypto_proj beat`
-6. Run a Celery Beat - `celery -A crypto_proj worker`
+1. Clone this repository, cd into it
+
+```
+git clone https://github.com/hatredholder/Crypto-Tracker.git
+cd Crypto-Tracker
+```    
+
+2. Start a new **Virtualenv**, activate it, install Python module requirements
+
+```
+virtualenv myenv
+source myenv/bin/activate
+pip install -r requirements.txt
+```
+3. Run the **Redis** server
+```
+redis-server
+```
+4. Run a **Celery** worker
+```
+celery -A crypto_proj worker
+```
+5. Run the **Celery** beat
+```
+celery -A crypto_proj beat
+```
+6. Finally, run the **Django** server
+```
+python manage.py runserver
+```
 
 ## Technologies
 
 Frontend: Basic HTML.
 
-Backend: Django 4.0, Celery, Redis (for Celery message broking and Channels layers).
+Backend: Django 4.0, Celery, Redis (for Celery message broking and Django Channels layers).
 
 Database: SQLite.
 
