@@ -12,33 +12,33 @@ Scroll down to see the **Instructions** on how to launch this project properly.
 
 ## Instructions
 
-1. Clone this repository, cd into it
+Clone this repository, cd into it
 
 ```
 git clone https://github.com/hatredholder/Crypto-Tracker.git
 cd Crypto-Tracker
 ```    
 
-2. Start a new **Virtualenv**, activate it, install Python module requirements
+Start a new **Virtualenv**, activate it, install Python module requirements
 
 ```
 virtualenv myenv
 source myenv/bin/activate
 pip install -r requirements.txt
 ```
-3. Run the **Redis** server
+Run the **Redis** server
 ```
 redis-server
 ```
-4. Run a **Celery** worker
+Run a **Celery** worker
 ```
 celery -A crypto_proj worker
 ```
-5. Run the **Celery** beat
+Run the **Celery** beat
 ```
 celery -A crypto_proj beat
 ```
-6. Finally, run the **Django** server
+Finally, run the **Django** server
 ```
 python manage.py runserver
 ```
