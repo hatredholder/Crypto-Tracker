@@ -1,14 +1,10 @@
 {% extends 'base.html' %}
 {% load humanize %}
-
 {% block title %}
     Main Page
 {% endblock title %}
-
 {% block content %}
-    <div style="text-align:center">
-        Data gets updated automatically every 60 seconds!
-    </div>
+    <div style="text-align:center">Data gets updated automatically every 60 seconds!</div>
     <table class="table">
         <thead>
             <tr>
@@ -23,11 +19,13 @@
             {% if data %}
                 {% for obj in data %}
                     <tr>
-                        <td><img class="image align-middle" value="{{forloop.counter}}" src={{obj.image}} height='70'></td>
-                        <td class="name align-middle" value="{{forloop.counter}}">{{obj.name}}</td>
-                        <td class="rank align-middle" value="{{forloop.counter}}">{{forloop.counter}}</td>
-                        <td class="market_cap align-middle" value="{{forloop.counter}}">{{obj.market_cap|intcomma}}</td>
-                        <td class="price align-middle" value="{{forloop.counter}}">{{obj.price}}</td>
+                        <td>
+                            <img class="image align-middle" value="{{ forloop.counter }}" src={{ obj.image }} height='70'>
+                        </td>
+                        <td class="name align-middle" value="{{ forloop.counter }}">{{ obj.name }}</td>
+                        <td class="rank align-middle" value="{{ forloop.counter }}">{{ forloop.counter }}</td>
+                        <td class="market_cap align-middle" value="{{ forloop.counter }}">{{ obj.market_cap|intcomma }}</td>
+                        <td class="price align-middle" value="{{ forloop.counter }}">{{ obj.price }}</td>
                     </tr>
                 {% endfor %}
             {% else %}
@@ -36,7 +34,6 @@
         </tbody>
     </table>
 {% endblock content %}
-
 {% block scripts %}
     <script>
         // "Humanize" a number (get commas separators)
