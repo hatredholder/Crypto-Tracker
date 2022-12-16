@@ -3,6 +3,7 @@ from django.db import models
 
 class Position(models.Model):
     """Info from the API model"""
+
     name = models.CharField(max_length=200)
     image = models.URLField()
     price = models.CharField(max_length=200)

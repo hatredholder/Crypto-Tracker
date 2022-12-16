@@ -11,8 +11,8 @@ class PositionConsumer(WebsocketConsumer):
     """Basic websocket consumer"""
 
     def connect(self):
-        self.channel_group_name = 'realtime-data'
-        
+        self.channel_group_name = "realtime-data"
+
         # Create a group called 'realtime-data'
         async_to_sync(self.channel_layer.group_add)(
             self.channel_group_name,
@@ -27,7 +27,7 @@ class PositionConsumer(WebsocketConsumer):
             self.channel_group_name,
             self.channel_name,
         )
-        
+
     def loc_message(self, event):
         # Get new data from the DB
         for i in Position.objects.all():

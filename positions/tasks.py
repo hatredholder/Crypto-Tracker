@@ -27,20 +27,20 @@ def get_crypto_data():
 
     # Delete old data
     Position.objects.all().delete()
-    
+
     # Store new data
     for item in data:
-        p, _ = Position.objects.get_or_create(name=item['name'])
-        p.image = item['image']
-        p.price = item['current_price']
-        p.rank = item['market_cap_rank']
-        p.market_cap = item['market_cap']
+        p, _ = Position.objects.get_or_create(name=item["name"])
+        p.image = item["image"]
+        p.price = item["current_price"]
+        p.rank = item["market_cap_rank"]
+        p.market_cap = item["market_cap"]
         p.save()
 
     # Send a message to the consumer
     channel_layer = get_channel_layer()
     message = {
-        'type': 'loc_message',
-        'positions': "1",
+        "type": "loc_message",
+        "positions": "1",
     }
-    async_to_sync(channel_layer.group_send)('realtime-data', message)
+    async_to_sync(channel_layer.group_send)("realtime-data", message)

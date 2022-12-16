@@ -6,11 +6,11 @@ from django.core.asgi import get_asgi_application
 
 import positions.routing
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'crypto_proj.settings')
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "crypto_proj.settings")
 
 application = ProtocolTypeRouter(
     {
-        'http': get_asgi_application(),
-        'websocket': URLRouter(positions.routing.websocket_urlpatterns),
+        "http": get_asgi_application(),
+        "websocket": URLRouter(positions.routing.websocket_urlpatterns),
     },
 )
